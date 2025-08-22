@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="main-div">
+    <div id="password-generator-div">
+      <div id="password-content-div">
+        <h2>Generate a <br><span>random password</span></h2>
+        <p>Never use an insecure password again</p>
+        <div id="password-length-div">
+          <label for="password-length">Password Length:</label>
+          <input type="number" id="password-length" min="10" max="20" value="10">
+          <div id="checkbox-container">
+            <input type="checkbox" id="include-numbers" checked>
+            <label for="include-numbers">Include Numbers</label>
+            <input type="checkbox" id="include-special" checked>
+            <label for="include-special">Include Symbols</label>
+          </div>
+        </div>
+        <button id="generate-password-button" onclick="generatePasswords()">Generate Passwords</button>
+        <hr id="divider">
+        <div id="generated-passwords-div">
+          <p id="first-password" hidden onclick="copyText(this)"></p>
+          <p id="second-password" hidden onclick="copyText(this)"></p>
+        </div>
+        <div id="copyMessage">
+          ✅ Password copied to clipboard!
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
