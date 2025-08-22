@@ -88,7 +88,6 @@ const symbols = [
 ];
 
 function generatePasswords() {
-  console.log("Generating passwords...!!!");
   let firstPassword = document.getElementById("first-password");
   let secondPassword = document.getElementById("second-password");
   let passwordLength = parseInt(
@@ -96,10 +95,6 @@ function generatePasswords() {
   );
   let includeNumbers = document.getElementById("include-numbers").checked;
   let includeSymbols = document.getElementById("include-special").checked;
-
-  console.log("Password Length:", passwordLength);
-  console.log("Include Numbers:", includeNumbers);
-  console.log("Include Symbols:", includeSymbols);
 
   firstPassword.textContent = generatePassword(
     passwordLength,
