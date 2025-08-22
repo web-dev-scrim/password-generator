@@ -145,3 +145,7 @@ function copyText(element) {
       console.error("Failed to copy: ", err);
     });
 }
+
+// Attach functions to window object for inline event handlers
+window.generatePasswords = generatePasswords;
+window.copyText = copyText;
